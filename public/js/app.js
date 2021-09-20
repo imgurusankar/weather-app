@@ -10,7 +10,7 @@ weather.addEventListener('submit', (e) => {
     if (location.length === 0) {
         messageOne.textContent = 'Enter the value..!!';
     } else {
-        fetch(`http://localhost:3000/weather?address=${location}`).then((response) => {
+        fetch(`/weather?address=${location}`).then((response) => {
             response.json().then((data) => {
                 if (data.error) {
                     messageOne.textContent = data.error;
